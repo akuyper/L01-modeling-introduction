@@ -1,0 +1,248 @@
+---
+title: "L01 Modeling Introduction"
+subtitle: "Data Science 2 with R (STAT 301-2)"
+author: "YOUR NAME"
+
+format:
+  html:
+    toc: true
+    embed-resources: true
+    code-fold: false
+    link-external-newwindow: true
+
+execute:
+  warning: false
+  
+from: markdown+emoji 
+---
+
+:::{.callout-note collapse=true}
+## Reminder
+
+Students must work in an R project connected to a GitHub repository for each lab. The repository should be well organized and it should have all relevant files. Within the project/repo there should be an appropriately named qmd file and the associated rendered html file (see canvas for naming convention). There should be at least 1 R script but there could be a need or reason for several R scripts (they should be appropriately named and ordered). In some instances you may create and save output in your repo to be referenced in your write-ups (should be organized). Students should create update README files in GitHub accordingly. 
+
+Remember to **make this document your own!** Meaning you should play with the layout and think about removing unnecessary sections or items (like this callout box block). Conversely you may end up adding sections or items. Make sure all of your solutions are clearly identified and communicated. 
+:::
+
+::: {.callout-tip icon=false}
+
+## Github Repo Link
+
+To link to your github **repo**sitory, appropriately edit the example link below. Meaning replace `https://your-github-repo-url` with your github repo url. Suggest verifying the link works before submitting.
+
+[https://your-github-repo-url](https://your-github-repo-url)
+
+:::
+
+## Overview
+
+This lab has two main objectives. The first is to ensure all relevant software for this course is properly installed, functional, and up-to-date. The second objective, is to build understanding of fundamental modeling concepts (prediction vs. inference, classification vs. regression, and mechanistic vs. empirically driven models). Additionally, students are also asked to perform small EDAs, which should be a review to those who took STAT 301-1.
+
+## Exercises
+
+### Exercise 1 
+
+Download and install the most recent versions of R and RStudio. Install and load `tidyverse`, `tidymodels`, and `ISLR` or `ISLR2`.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+```{r}
+#| label: ex-1
+
+# Load package(s) here!
+
+```
+
+:::
+
+### Exercise 2
+
+Use the appropriate tidyverse `read_` function(s) to load the `Auto` and `College` datasets from the `data/` subdirectory into R.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 3
+
+Use proper data typing to clean the `Auto` and `College` dataset and write the clean dataset to a `processed` folder within the `data` folder that preserves the data types.
+
+:::{.callout-note collapse=true}
+In practice, this step in the EDA is done within a cleaning.R script.
+
+You can find the codebook for `Auto` and `College` by loading the `ISLR` or `ISLR2` package and running the command `?Auto` and `?College`, respectively.
+:::
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 4
+
+Using the `Auto` dataset...
+
+#### Part (a)
+
+Determine which variables could be used as an outcome variable to a classification problem and which variables could be used as an outcome variable to a regression problem.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (b) 
+
+Choose and state **one** variable to be the response in a **classification** problem. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (c) 
+
+Perform a short EDA to determine which variables might make for good predictors for your chosen response variable. List which variables you would use in this model (you don't need to actually create a model).
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (d) 
+
+What are $n$ and $p$ (sample size and number of predictors) for this hypothetical model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 5
+
+Using the `College` dataset...
+
+#### Part (a) 
+
+Determine which variables could be used as an outcome variable to a classification problem and which variables could be used as an outcome variable to a regression problem.
+
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (b)
+
+Choose **one** variable to be the response in a **regression** problem.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (c) 
+
+Perform a short EDA to determine which variables might make for good predictors for your chosen response variable. List which variables you would use in this model (you don't need to actually create a model).
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (d) 
+
+What are $n$ and $p$ (sample size and number of predictors) for this hypothetical model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 6
+
+For each of the following examples, please describe: (1) whether the scenario is a classification or regression problem; (2) whether the goal is inferential or predictive; and (3) provide both the sample size ($n$) and the number of predictors ($p$).
+
+#### Part (a) 
+
+We collect a set of data on the top 500 firms in the US. For each firm we record profit, number of employees, industry, and CEO salary. We are interested in understanding which factors affect CEO salary.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (b)
+
+We are considering launching a new product and wish to know whether it will be a success or a failure. We collect data on 20 similar products that were previously launched. For each product we have recorded whether it was a success or a failure, the price charged for the product, the marketing budget, the competition price, and ten other variables.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+#### Part (c)
+
+We are interested in predicting the % change in the USD/Euro exchange rate in relation to the weekly changes in the world stock markets. We collect data once a week for all of 2012. For each week we record the % change in the USD/Euro rate, the % change in the US market, the % change in the British market, and the % change in the German market.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+### Exercise 7
+
+Provide two real-life examples -- one of a case where someone might use a mechanistic model, and one where they might use an empirically driven model. For each, explain why. These examples must differ from those in the book.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
+## Graduate Challenge
+
+::: callout-important
+
+Graduate students are required to complete this challenge. **It is optional for undergraduate students.**
+
+:::
+
+Explain, in your own words, the difference(s) between a predictive model and an inferential model. When might you use one kind of model versus the other? Why?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+YOUR SOLUTION HERE
+
+:::
+
