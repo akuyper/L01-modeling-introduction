@@ -2,26 +2,40 @@
 title: "L01 Modeling Introduction"
 subtitle: "Data Science 2 with R (STAT 301-2)"
 author: "YOUR NAME"
+pagetitle: "L01 YOUR NAME"
+date: today
 
 format:
   html:
     toc: true
+    toc-depth: 4
+    toc-location: left
     embed-resources: true
     code-fold: false
     link-external-newwindow: true
 
 execute:
   warning: false
-  
-from: markdown+emoji 
+
+from: markdown+emoji
+reference-location: margin
+citation-location: margin  
 ---
 
 :::{.callout-note collapse=true}
 ## Reminder
 
-Students must work in an R project connected to a GitHub repository for each lab. The repository should be well organized and it should have all relevant files. Within the project/repo there should be an appropriately named qmd file and the associated rendered html file (see canvas for naming convention). There should be at least 1 R script but there could be a need or reason for several R scripts (they should be appropriately named and ordered). In some instances you may create and save output in your repo to be referenced in your write-ups (should be organized). Students should create update README files in GitHub accordingly. 
+Students must work in an R project connected to a GitHub repository for each lab. The repository should be well organized and it should have all relevant files. 
 
-Remember to **make this document your own!** Meaning you should play with the layout and think about removing unnecessary sections or items (like this callout box block). Conversely you may end up adding sections or items. Make sure all of your solutions are clearly identified and communicated. 
+Within the project/repo there should be an appropriately named qmd file and the associated rendered html file (see canvas for naming convention). 
+
+There should be at least 1 R script, but there could be a need or reason for several R scripts (they should be appropriately named and ordered). 
+
+In some instances you may create and save output in your repo to be referenced in your write-ups (should be organized). 
+
+You are expected to update and/or create README file(s) in your GitHub repo accordingly. 
+
+You are expected to remove unnecessary sections or items (like this callout box/block) and all solutions are expected to be clearly identified and communicated.
 :::
 
 ::: {.callout-tip icon=false}
@@ -36,13 +50,13 @@ To link to your github **repo**sitory, appropriately edit the example link below
 
 ## Overview
 
-This lab has two main objectives. The first is to ensure all relevant software for this course is properly installed, functional, and up-to-date. The second objective, is to build understanding of fundamental modeling concepts (prediction vs. inference, classification vs. regression, and mechanistic vs. empirically driven models). Additionally, students are also asked to perform small EDAs, which should be a review to those who took STAT 301-1.
+This lab has two main objectives. The first is to ensure all relevant software for this course is properly installed, functional, and up-to-date. The second objective, is to build understanding of fundamental modeling concepts (prediction vs. inference, classification vs. regression, and mechanistic vs. empirically driven models). Additionally, students are also asked to perform small EDAs, which should be a review.
 
 ## Exercises
 
 ### Exercise 1 
 
-Download and install the most recent versions of R and RStudio. Install and load `tidyverse`, `tidymodels`, and `ISLR` or `ISLR2`.
+Use the appropriate tidyverse `read_*()` function(s) to load the `Auto` and `College` datasets from the `data/` subdirectory into R.
 
 ::: {.callout-tip icon="false"}
 ## Solution
@@ -58,7 +72,7 @@ Download and install the most recent versions of R and RStudio. Install and load
 
 ### Exercise 2
 
-Use the appropriate tidyverse `read_` function(s) to load the `Auto` and `College` datasets from the `data/` subdirectory into R.
+Use the appropriate tidyverse `read_*()` function(s) to load the `Auto` and `College` datasets from the `data/` subdirectory into R.
 
 ::: {.callout-tip icon="false"}
 ## Solution
@@ -183,7 +197,7 @@ YOUR SOLUTION HERE
 
 ### Exercise 6
 
-For each of the following examples, please describe: (1) whether the scenario is a classification or regression problem; (2) whether the goal is inferential or predictive; and (3) provide both the sample size ($n$) and the number of predictors ($p$).
+For each of the following examples, please describe: (1) whether the scenario is a classification or regression problem; (2) whether the goal is inferential/explanatory or predictive; and (3) provide both the sample size ($n$) and the number of predictors ($p$).
 
 #### Part (a) 
 
@@ -209,7 +223,7 @@ YOUR SOLUTION HERE
 
 #### Part (c)
 
-We are interested in predicting the % change in the USD/Euro exchange rate in relation to the weekly changes in the world stock markets. We collect data once a week for all of 2012. For each week we record the % change in the USD/Euro rate, the % change in the US market, the % change in the British market, and the % change in the German market.
+We are interested in predicting the percent change in the USD/Euro exchange rate in relation to the weekly changes in various stock markets. We collect data once a week for all of 2012. For each week we record the percent change in the USD/Euro rate, the percent change in the US market, the percent change in the British market, the percent change in the German market, and the percent change in the Japanese market.
 
 ::: {.callout-tip icon="false"}
 ## Solution
