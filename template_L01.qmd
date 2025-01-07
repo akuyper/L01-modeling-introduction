@@ -56,7 +56,7 @@ This lab has two main objectives. The first is to ensure all relevant software f
 
 ### Exercise 1 
 
-Use the appropriate tidyverse `read_*()` function(s) to load the `Auto` and `College` datasets from the `data/` subdirectory into R.
+Download and install the most recent versions of R and RStudio. Install and load `tidyverse`, `tidymodels`, and `ISLR` or `ISLR2`.
 
 ::: {.callout-tip icon="false"}
 ## Solution
